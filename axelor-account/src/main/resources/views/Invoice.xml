@@ -1858,6 +1858,7 @@
       name="action-invoice-validate-disable-to-go-back-to-validate-status-from-ventilated-invoice"/>
     <action name="action-invoice-method-check-analytic-axis"/>
     <action name="save"/>
+    <action name="action-invoice-method-compute-invoice-category"/>
     <action name="action-validate-invoice-ckeck-invoice-line-tax-list"/>
     <action name="action-invoice-method-validate-advance-vat-system"/>
     <action name="action-invoice-method-generate-invoice-terms" if="!invoiceTermList"/>
@@ -2401,6 +2402,10 @@
 
   <action-method name="action-invoice-method-validate-and-ventilate">
     <call class="com.axelor.apps.account.web.InvoiceController" method="validateAndVentilate"/>
+  </action-method>
+
+  <action-method name="action-invoice-method-compute-invoice-category">
+    <call class="com.axelor.apps.account.web.InvoiceController" method="computeInvoiceCategory"/>
   </action-method>
 
   <action-method name="action-invoice-method-cancel">
