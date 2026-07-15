@@ -243,7 +243,9 @@ public class InvoiceController {
     invoice = Beans.get(InvoiceRepository.class).find(invoice.getId());
 
     try {
-      Beans.get(InvoiceCategoryService.class).setInvoiceCategory(invoice);
+      response.setValue(
+          "invoiceCategorySelect",
+          Beans.get(InvoiceCategoryService.class).computeInvoiceCategorySelect(invoice));
     } catch (Exception e) {
       TraceBackService.trace(response, e);
     }

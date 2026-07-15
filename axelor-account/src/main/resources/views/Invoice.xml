@@ -1858,11 +1858,11 @@
       name="action-invoice-validate-disable-to-go-back-to-validate-status-from-ventilated-invoice"/>
     <action name="action-invoice-method-check-analytic-axis"/>
     <action name="save"/>
-    <action name="action-invoice-method-compute-invoice-category"/>
     <action name="action-validate-invoice-ckeck-invoice-line-tax-list"/>
     <action name="action-invoice-method-validate-advance-vat-system"/>
     <action name="action-invoice-method-generate-invoice-terms" if="!invoiceTermList"/>
     <action name="action-invoice-method-compute-invoice-terms-due-dates"/>
+    <action name="action-invoice-method-compute-invoice-category"/>
     <action name="save"/>
     <action name="action-record-invoice-set-discount-values"
       if="__config__.app.getApp('account').getManageFinancialDiscount() &amp;&amp; [1,3].contains(operationTypeSelect) &amp;&amp; operationSubTypeSelect != 2"/>
